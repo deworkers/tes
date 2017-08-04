@@ -1,0 +1,25 @@
+/*полезные миксины*/
+
+
+//цвет плейслолдера input
+.placeholder-color(@ph-color) {
+    &::-webkit-input-placeholder {color: @ph-color}
+    &::-moz-placeholder          {color: @ph-color}
+    &:-moz-placeholder           {color: @ph-color}
+    &:-ms-input-placeholder      {color: @ph-color}
+}
+
+.placeholder-styled {
+    &::-webkit-input-placeholder {
+        font-style: italic;
+    }
+    &::-moz-placeholder          {
+        font-style: italic;
+    }
+    &:-moz-placeholder           {
+        font-style: italic;
+    }
+    &:-ms-input-placeholder      {
+        font-style: italic;
+    }
+}

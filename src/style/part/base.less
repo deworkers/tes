@@ -1,0 +1,192 @@
+//переменные
+@font: 'Open Sans', sans-serif;
+@font-title: 'Open Sans', serif;
+@font-alt: 'Tahoma', serif;
+
+@color_white: #fff;
+@color_text: #000;
+@color_link: #00519e;
+@color_blue: #00467f;
+@color_grey: #e5e7e9;
+@color_orange: #f58e1f;
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    word-spacing: normal;
+}
+
+div {
+    position: relative;
+}
+
+html { 
+    height: 100%; 
+    width: 100%; 
+}
+
+body {
+    width: 100%; 
+    position: relative;
+    font-family: @font;
+    margin: 0;
+    padding: 0;
+    background: @color_white;
+    color: @color_text;
+}
+
+img {
+    border: none;
+}
+
+p {
+    font-size: 14px;
+    margin: 0 0 20px 0;
+    line-height: 22px;
+}
+
+a {
+    color: @color_link;
+    outline: none;
+}
+
+button {
+    transition: all 0.2s;
+}
+
+a:hover {
+    text-decoration: none;
+    color: @color_orange;
+}
+
+.head (@font-size, @margin-bottom, @line-height: normal, @color) {
+    font-size: @font-size;
+    margin: 0 0 @margin-bottom 0;
+    line-height: @line-height;
+    color: @color;
+}
+
+h1 {
+    .head(25px, 30px, normal, @color_text);
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+h2 {
+    .head(22px, 25px, normal, @color_text);
+}
+
+h3 {
+    .head(18px, 20px, normal, @color_text);
+}
+
+h4 {
+    .head(16px, 15px, normal, @color_text);
+}
+
+h5 {
+    .head(13px, 15px, normal, @color_text);
+    font-weight: 700;
+}
+
+
+table{
+    border-collapse:collapse;
+}
+
+td{
+
+}
+
+ul, ol{
+    margin:0 0 25px 0px; 
+    padding: 0 0 0 30px;
+}
+ul li, ol li{
+    font-size: 14px;
+    margin-bottom:5px;
+}
+
+.clearfix {
+    zoom: 1;
+}
+.clearfix:before,
+.clearfix:after {
+    content: "";
+    display: table;
+}
+.clearfix:after {
+    clear: both;
+}
+
+
+/*базовые стили обертки модалок*/
+#overlay {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    top: 0;
+    left: 0;
+    z-index: 10000;
+    display: none;
+    overflow-y: scroll;
+}
+
+.modal {
+    width: 560px;
+    position: absolute;
+    left: 50%;
+    top: 150px;
+    margin-left: -280px;
+    background: #fff;
+    padding: 40px 40px;
+    display: none;
+}
+
+.modal--fz  {             // во весь экран
+    width: 100%;
+    min-height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: #fff;
+    padding: 0;
+    display: none;
+    margin: 0;
+}
+
+.j-noScroll {
+    overflow: hidden;
+}
+
+input[type="checkbox"] {
+    display: none;
+
+
+    & + label {
+        cursor: pointer;
+        &:before {
+            content: "";
+            width: 16px;
+            height: 16px;
+            margin-right: 5px;
+            border-radius: 3px;
+            vertical-align: middle;
+            display: inline-block;
+            background: #cddcee;
+        }
+    }
+
+    &:checked + label {
+
+        &:before {
+            background: #005baa;
+            background-size: 80%;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-image: url(data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHZlcnNpb249IjEuMSIgdmlld0JveD0iMCAwIDI2IDI2IiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCAyNiAyNiIgd2lkdGg9IjE2cHgiIGhlaWdodD0iMTZweCI+CiAgPHBhdGggZD0ibS4zLDE0Yy0wLjItMC4yLTAuMy0wLjUtMC4zLTAuN3MwLjEtMC41IDAuMy0wLjdsMS40LTEuNGMwLjQtMC40IDEtMC40IDEuNCwwbC4xLC4xIDUuNSw1LjljMC4yLDAuMiAwLjUsMC4yIDAuNywwbDEzLjQtMTMuOWgwLjF2LTguODgxNzhlLTE2YzAuNC0wLjQgMS0wLjQgMS40LDBsMS40LDEuNGMwLjQsMC40IDAuNCwxIDAsMS40bDAsMC0xNiwxNi42Yy0wLjIsMC4yLTAuNCwwLjMtMC43LDAuMy0wLjMsMC0wLjUtMC4xLTAuNy0wLjNsLTcuOC04LjQtLjItLjN6IiBmaWxsPSIjRkZGRkZGIi8+Cjwvc3ZnPgo=);
+        }
+    }
+}
