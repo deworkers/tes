@@ -136,6 +136,7 @@ gulp.task('sprite:build', function() {
                 imgName: 'sprite.png',
                 cssName: 'sprite.less',
                 cssFormat: 'less',
+                padding: 2,
                 algorithm: 'binary-tree',
                 imgPath: '../img/sprite.png'
             }));
