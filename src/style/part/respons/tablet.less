@@ -20,17 +20,23 @@
         margin: 0;
     }
 
-    .head-bottom-box {
-        display: block;
-        margin-right: 30px;
-    }
 
     .head-link {
-        width: 100%;
+        width: 49%;
+        margin-right: 2%;
         margin-bottom: 70px;
         &:last-child {
             margin-bottom: 0;
         }
+
+        &:nth-child(2n) {
+            margin-right: 0;
+        }
+
+        &:nth-child(3) {
+            margin-bottom: 0;
+        }
+
     }
 
     .main-link {
@@ -38,7 +44,7 @@
     }
 
     .main-link-box {
-        width: 50%;
+        width: 100%;
     }
 
     .main-link-one {
@@ -91,6 +97,10 @@
         }
     }
 
+    .form-cols.flex-elem {
+        margin-top: 0px;
+    }
+
     .head-top {
         display: none;
     }
@@ -117,6 +127,19 @@
 
     .barcode-img {
         display: none;
+    }
+
+    .content {
+        margin-left: 0;
+    }
+
+    .news-one {
+        width: 100%;
+        margin-right: 0;
+    }
+
+    .lk-enter {
+        top: 30px;
     }
 
 }

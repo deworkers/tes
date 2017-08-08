@@ -26,13 +26,13 @@ body {
 
 .head-top {
     display: table;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    width: 100%;
     padding: 35px 0;
 }
 
 .main-logo {
+    display: table-cell;
+    vertical-align: middle;
     img {
         width: 270px;
         height: auto;
@@ -40,7 +40,8 @@ body {
 }
 
 .head-top-mid {
-    display: table;
+    display: table-cell;
+    vertical-align: middle;
 }
 
 .head-top__phone {
@@ -100,23 +101,26 @@ body {
     font-size: 13px;
     font-style: italic;
     color: #818181;
+    margin-top: 10px;
 
     a {
         text-decoration: none;
-        border: 1px solid @color_link;
+        border-bottom: 1px solid @color_link;
         border-image: url(../img/border.png) 0 0 1 0 repeat;
     }
 }
 
 .head-lk {
-    margin-right: 80px;
+    padding-right: 40px;
+    display: table-cell;
+    vertical-align: middle;
 }
 
 .head-lk__enter {
-    display: block;
+    display: inline-block;
     text-decoration: none;
     font-size: 14px;
-    border: 1px solid @color_link;
+    border-bottom: 1px solid @color_link;
     border-image: url(../img/border.png) 0 0 1 0 repeat;
     margin-bottom: 5px;
     position: relative;
@@ -144,24 +148,16 @@ body {
 }
 
 .head-bottom {
-    display: flex;
+
 }
 
-.head-bottom-box {
-    display: flex;
-    margin-right: 30px;
-    width: 50%;
-    &:last-child {
-        margin-right: 0;
-    }
-}
 
 .head-link {
     display: block;
     float: left;
-    width: 50%;
+    width: 23%;
     text-decoration: none;
-    margin-right: 30px;
+    margin-right: 2.66%;
     position: relative;
 
     &:last-child {
@@ -171,7 +167,9 @@ body {
 }
 
 .head-link__img {
+    border-radius: 3px 3px 0 0;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    overflow-y: hidden;
     img {
         border-radius: 3px 3px 0 0;
         width: 100%;
@@ -207,8 +205,22 @@ body {
 .menu {
     border-radius: 3px;
     overflow: hidden;
-    float: left;
     width: 220px;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    li {
+        padding: 0;
+        margin: 0;
+    }
+
     a {
         display: block;
         text-decoration: none;
@@ -217,11 +229,39 @@ body {
         padding: 15px 25px;
         font-size: 14px;
         border-bottom: 1px solid #2767a8;
+    }
 
-        &:last-child {
-            border-bottom: none;
+    .curr {
+        background: @color_orange;
+        border-bottom: none;
+        & + ul {
+            border-bottom: 1px solid #2767a8;
         }
     }
+
+    ul ul {
+        a {
+            border-bottom: 0;
+            font-size: 12px;
+            padding: 10px 25px;
+            background: #003a74;
+            &.curr {
+                color: @color_orange;
+                background: #003a74;
+                font-weight: 700;
+            }
+        }
+    }
+}
+
+.menu-inn {
+    position: relative;
+    float: left;
+    margin-bottom: 50px;
+}
+
+.content {
+    margin-left: 260px;
 }
 
 .main-top {
@@ -231,7 +271,7 @@ body {
     background-size: cover;
     background-position: center;
     text-align: center;
-    padding-top: 80px;
+    padding: 80px 20px 0;
     color: #fff;
 }
 
@@ -269,17 +309,16 @@ body {
 
 .main-link {
     margin: 0 290px 0 260px;
-    display: flex;
 }
 
 .main-link-box {
-    display: flex;
 }
 
 .main-link-one {
     margin: 20px 0;
     display: block;
-    width: 50%;
+    width: 24%;
+    float: left;
     margin-right: 2%;
     position: relative;
     font-size: 13px;
@@ -291,11 +330,15 @@ body {
     span {
         display: table-cell;
         vertical-align: middle;
+        height: 90px;
+        padding-left: 60px;
     }
 
     &:before {
         content: "";
-        display: table-cell;
+        position: absolute;
+        top: 0;
+        left: -25px;
         transform: scale(0.5);
     }
 
@@ -381,15 +424,19 @@ body {
 .form-line {
     margin-bottom: 10px;
     input {
-        height: 25px;
+        height: 30px;
         border-radius: 3px;
         background: @color_grey;
         border: none;
         outline: none;
         width: 100%;
-        padding: 0 5px;
+        padding: 0 10px;
         .placeholder-styled;
     }
+}
+
+.form-cols.flex-elem {
+    margin-top: 15px;
 }
 
 .form-cols {
@@ -401,7 +448,6 @@ body {
     display: table-cell;
     vertical-align: middle;
     width: 50%;
-    text-align: center;
     &:nth-child(1) {
         padding-right: 10px;
     }
@@ -435,7 +481,6 @@ body {
 
     a {
         margin-top: 10px;
-        text-align: center;
     }   
 }
 
@@ -478,10 +523,11 @@ body {
 }
 
 .main-news-box {
-    display: flex;
+
 }
 
 .main-news-one {
+    float: left;
     width: 31%;
     margin-right: 3%;
 
@@ -489,6 +535,19 @@ body {
         margin-right: 0;
     }
 }
+
+
+.news-one {
+    float: left;
+    width: 31%;
+    margin-right: 3%;
+    margin-bottom: 30px;
+
+    &:nth-child(3n) {
+        margin-right: 0;
+    }
+}
+
 
 .main-news-link {
     border-bottom: 1px solid #cddcee;
@@ -514,8 +573,20 @@ body {
     font-weight: 600;
     line-height: 24px;
     margin-bottom: 20px;
+    text-decoration: none;  
+}
+
+.news-one__title {
+    display: block;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 28px;
+    margin-bottom: 15px;
     text-decoration: none;
     
+    span {
+        border-bottom: 1px solid #d0d0d0;
+    }
 }
 
 .main-news-one__date {
@@ -542,12 +613,13 @@ body {
 }
 
 .footer-box {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    display: table;
+    width: 100%;
 }
 
 .footer-left {
+    display: table-cell;
+    width: 45%;
     p {
         font-size: 12px;
         margin: 10px 0;
@@ -556,6 +628,7 @@ body {
 }
 
 .footer-center {
+    display: table-cell;
     p {
         font-size: 12px;
         margin: 10px 0;
@@ -568,7 +641,9 @@ body {
 }
 
 .footer-right {
+    display: table-cell;
     font-size: 12px;
+    width: 200px;
 
     a {
         text-decoration: none;
@@ -692,18 +767,20 @@ body {
 }
 
 .m-menu-top {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    display: table;
     padding: 10px 0 30px;
+    width: 100%;
 }
 
 .modal-close {
+    display: table-cell;
+    vertical-align: middle;
     width: 40px;
     height: 40px;
     cursor: pointer;
     position: relative;
     left: -10px;
+    top: -5px;
 
     &:before {
         content: "";
@@ -717,6 +794,8 @@ body {
 }
 
 .m-phone {
+    display: table-cell;
+    vertical-align: middle;
     font-size: 18px;
     font-weight: 600;
     font-style: italic;
@@ -734,7 +813,10 @@ body {
 }
 
 .m-social {
-    
+    display: table-cell;
+    vertical-align: middle;
+    text-align: right;
+    padding-right: 160px;
 }
 
 .m-menu-list {
@@ -835,6 +917,12 @@ body {
 
 }
 
+.head-lk__enter--m {
+    position: absolute;
+    right: 0;
+    top: 15px;
+}
+
 
 
 .m-searh {
@@ -896,3 +984,203 @@ body {
     }
 }
 
+
+.lk-enter {
+    display: none;
+    font-family: @font-alt;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0px 30px rgba(0,0,0,0.15);
+    position: absolute;
+    z-index: 10000;
+    width: 260px;
+    left: 50%;
+    top: 35px;
+    margin-left: -160px;
+
+    &:before {
+        position: absolute;
+        content: "";
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 0 7.5px 8px 7.5px;
+        border-color: transparent transparent #ffffff transparent;
+        top: -8px;
+        left: 50%;
+    }
+}
+
+.lk-enter--mobile {
+    margin-left: 0;
+    left: auto;
+    right: 0;
+    top: 40px;
+    z-index: 1500;
+    &:before {
+        display: none;
+    }
+}
+
+.lk-enter__title {
+    padding: 10px 15px;
+    font-size: 12px;
+    font-weight: 700;
+    border-bottom: 1px solid #d7d7d7;
+}
+
+.lk-enter-form {
+    padding: 20px 15px;
+}
+
+.lk-form-line {
+    margin-bottom: 10px;
+    input {
+        width: 100%;
+        font-size: 15px;
+        height: 32px;
+        padding: 0 10px;
+        border-radius: 5px;
+        border: 1px solid #cdcddd;
+        box-shadow: inset 0 3px 5px #ebebeb;
+    }
+
+    input[type="checkbox"] {
+
+    }
+
+    label {
+        line-height: 25px;
+        margin-right: 10px;
+    }
+
+    button {
+        font-size: 14px;
+        width: 100%;
+        background: @color_blue;
+        color: #fff;
+        border-radius: 3px;
+        border: none;
+        outline: none;
+        height: 32px;
+        margin-top: 10px;
+    }
+}
+
+.lk-form-col {
+    display: table-cell;
+    font-size: 14px;
+}
+
+.lk-form__reg {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    display: block;
+    font-size: 14px;
+    text-align: center;
+}
+
+.news-filtr {
+    margin-bottom: 30px;
+}
+
+.news-filtr__title {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.news-filtr-date {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 20px;
+
+    input {
+        height: 30px;
+        width: 120px;
+        background: #e5e7e9;
+        padding: 0 15px;
+        border: none;
+        outline: none;
+        border-radius: 3px;
+    }
+
+    &:after {
+        content: "";
+        display: inline-block;
+        .sprite(@calendar);
+        vertical-align: middle;
+        transform: scale(0.5);
+    }
+}
+
+.btn-submit {
+    height: 30px;
+    background: @color_orange;
+    color: #fff;
+    font-size: 14px;
+    padding: 0 15px;
+    border: none;
+    outline: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.news-bottom {
+    padding-top: 30px;
+    border-top: 1px solid #cddcee;
+}
+
+.pagination-one {
+        color: #000;
+        font-size: 13px;
+        display: inline-block;
+        margin-right: 5px;
+        padding: 4px 8px;
+        text-align: center;
+        width: 25px;
+        vertical-align: middle;
+        background: #e5e7e9;
+        border-radius: 3px;
+        text-decoration: none;
+
+}
+
+.pagination {
+    margin-bottom: 40px;
+
+    .curr {
+        color: #fff;
+        background: @color_orange;
+    }
+
+    .next {
+        font-size: 12px;
+        border-bottom: 1px solid #d0d0d0;
+        text-decoration: none;
+        margin-left: 10px;
+    }
+
+    .prev {
+        font-size: 12px;
+        border-bottom: 1px solid #d0d0d0;
+        text-decoration: none;
+        margin-right: 15px;
+    }
+}
+
+.bottom-content {
+    margin-bottom: 50px;
+}
+
+.lk-enter-overlay {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1200;
+    background: rgba(0, 0, 0, 0.1)
+}

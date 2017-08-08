@@ -1,7 +1,7 @@
 //переменные
 @font: 'Open Sans', sans-serif;
 @font-title: 'Open Sans', serif;
-@font-alt: 'Tahoma', serif;
+@font-alt: 'Tahoma','Geneva', sans-serif;
 
 @color_white: #fff;
 @color_text: #000;
@@ -68,17 +68,17 @@ a:hover {
 }
 
 h1 {
-    .head(25px, 30px, normal, @color_text);
-    font-weight: 400;
-    text-transform: uppercase;
+    .head(28px, 30px, normal, @color_text);
+    font-weight: 700;
 }
 
 h2 {
-    .head(22px, 25px, normal, @color_text);
+    .head(24px, 25px, normal, @color_text);
 }
 
 h3 {
     .head(18px, 20px, normal, @color_text);
+    font-weight: 400;
 }
 
 h4 {
@@ -129,7 +129,7 @@ ul li, ol li{
     background: rgba(0,0,0,0.5);
     top: 0;
     left: 0;
-    z-index: 10000;
+    z-index: 1000;
     display: none;
     overflow-y: scroll;
 }
@@ -167,14 +167,17 @@ input[type="checkbox"] {
 
     & + label {
         cursor: pointer;
+        padding-left: 25px;
         &:before {
             content: "";
             width: 16px;
             height: 16px;
             margin-right: 5px;
             border-radius: 3px;
-            vertical-align: middle;
-            display: inline-block;
+            display: block;
+            position: absolute;
+            top: 4px;
+            left: 0;
             background: #cddcee;
         }
     }
@@ -183,10 +186,21 @@ input[type="checkbox"] {
 
         &:before {
             background: #005baa;
-            background-size: 80%;
+        }
+
+        & i {
             background-repeat: no-repeat;
             background-position: center;
-            background-image: url(data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHZlcnNpb249IjEuMSIgdmlld0JveD0iMCAwIDI2IDI2IiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCAyNiAyNiIgd2lkdGg9IjE2cHgiIGhlaWdodD0iMTZweCI+CiAgPHBhdGggZD0ibS4zLDE0Yy0wLjItMC4yLTAuMy0wLjUtMC4zLTAuN3MwLjEtMC41IDAuMy0wLjdsMS40LTEuNGMwLjQtMC40IDEtMC40IDEuNCwwbC4xLC4xIDUuNSw1LjljMC4yLDAuMiAwLjUsMC4yIDAuNywwbDEzLjQtMTMuOWgwLjF2LTguODgxNzhlLTE2YzAuNC0wLjQgMS0wLjQgMS40LDBsMS40LDEuNGMwLjQsMC40IDAuNCwxIDAsMS40bDAsMC0xNiwxNi42Yy0wLjIsMC4yLTAuNCwwLjMtMC43LDAuMy0wLjMsMC0wLjUtMC4xLTAuNy0wLjNsLTcuOC04LjQtLjItLjN6IiBmaWxsPSIjRkZGRkZGIi8+Cjwvc3ZnPgo=);
+            top: 3px;
+            left: 0px;
+            position: absolute;
+            background-size: 80%;
+            width: 16px;
+            height: 16px;
+            border-radius: 3px;
+            vertical-align: middle;
+            display: block;
+            background-image: url(../img/checked.png);
         }
     }
 }

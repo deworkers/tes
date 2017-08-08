@@ -19,4 +19,20 @@ $(document).ready(function() {
         event.preventDefault();
         $('.m-searh').animate({'top':'-100%'}, 200)
     });
+
+    $('.head-lk__enter, .m-head-lk').on('click', function() {
+        $('.lk-enter').slideToggle();
+        $('.lk-enter-overlay').fadeIn();
+    });
+
+    $('.lk-enter-overlay').on('click', function(event) {
+        event.stopPropagation();
+        $('.lk-enter').slideUp();
+        $('.lk-enter-overlay').hide();
+    });
+
+    $( ".datepicker" ).datepicker({
+        
+    });
+
 });

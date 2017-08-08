@@ -3,13 +3,14 @@
 @import "../base.less";
 
 
-@media screen and (max-width: 768px) { // планшет горизонтально
+@media screen and (max-width: 759px) { // планшет горизонтально
     .main-link {
         display: block;
     }
 
     .main-link-one {
         margin: 0;
+        width: 100%;
     }
 
     .head-bottom {
@@ -17,15 +18,12 @@
     }
 
     .head-bottom-box {
-        display: flex;
-        align-items: stretch;
         width: 100%;
         margin-bottom: 10px;
     }
 
     .head-link {
-        margin-right: 10px;
-        margin-bottom: 0px;
+        margin-bottom: 10px;
     }
 
     .head {
@@ -60,6 +58,10 @@
 
     .flex-elem {
         width: 100%;
+
+        a {
+            display: block;
+        }
     }
 
     .flex-box .form-line {
@@ -104,6 +106,29 @@
         font-size: 12px;
     }
 
+    .news-one__title {
+        font-size: 15px;
+        line-height: 24px;
+    }
+
+    .news-one {
+
+        .main-news-one__date {
+            font-size: 10px;
+            margin-bottom: 5px;
+        }
+
+        .main-news-one__descr {
+            font-size: 12px;
+            line-height: 18px;
+            margin-bottom: 10px;
+        }
+
+        .main-news-one__more {
+            font-size: 10px;
+        }
+    }
+
     .m-head {
         padding: 15px 0;
     }
@@ -118,14 +143,23 @@
 
     .m-head-searh {
         width: 30px;
+        &:before {
+            transform: scale(0.4);
+        }
     }
 
     .m-head-lk {
         width: 30px;
+        &:before {
+            transform: scale(0.4);
+        }
     }
 
     .m-head-menu {
         top: 5px;
+        &:before {
+            transform: scale(0.4);
+        }
     }
 
     .m-head-right {
@@ -142,6 +176,8 @@
 
     .footer-left {
         margin-bottom: 30px;
+        display: block;
+        width: 100%;
     }
 
     .footer-center {
@@ -173,7 +209,7 @@
     
     .main-top {
         height: 230px;
-        padding-top: 50px;
+        padding-top: 40px;
     }
 
     .main-top__top {
@@ -234,7 +270,7 @@
 
     .head-lk__enter {
         position: absolute;
-        right: 10px;
+        right: 0px;
         top: 5px;
         width: 40px;
         height: 40px;
@@ -252,10 +288,27 @@
 
     .modal-close {
         left: 0;
+        &:before {
+            transform: scale(0.35);
+            top: -2px;
+            left: 0;
+        }
     }
 
     .m-social {
-        padding-right: 50px;
+        padding-right: 35px;
+
+        .social {
+            &:before {
+                transform: scale(0.4);
+            }
+        }
+    }
+
+    .head-lk__enter--m {
+        &:before {
+            transform: scale(0.4);
+        }
     }
 
     .m-searh {
@@ -273,8 +326,101 @@
         top: -20px;
         width: 50% !important;
     }
+
+    p {
+        font-size: 13px;
+        margin: 0 0 10px 0;
+        line-height: 22px;
+    }
+
+    h1 {
+        .head(20px, 20px, normal, @color_text);
+        font-weight: 700;
+    }
+
+    h2 {
+        .head(18px, 20px, normal, @color_text);
+        font-weight: 700;
+    }
+
+    h3 {
+        .head(14px, 10px, normal, @color_text);
+    }
+
+    .news-filtr {
+        margin-bottom: 20px;
+    }
+
+    .news-filtr__title {
+        display: block;
+        font-size: 11px;
+    }
+
+    .news-filtr-date {
+        margin-right: 5px;
+        input {
+            width: 70px;
+            height: 24px;
+            font-size: 11px;
+            padding: 0 5px;
+        }
+    }
+
+    .btn-submit {
+        font-size: 11px;
+        height: 24px;
+    }
+
+    .news-bottom {
+        padding-top: 20px;
+    }
+
+    .pagination-one {
+        font-size: 12px;
+        padding: 2px 6px;
+        width: 22px;
+    }
+
+    .pagination {
+        margin-bottom: 20px;
+        .next {
+            font-size: 11px;
+        }
+
+        .prev {
+            font-size: 11px;
+        }
+    }
+
+    .bottom-content {
+        margin-bottom: 30px;
+    }
+
+    .m-searh-close {
+        &:after {
+            transform: scale(0.35);
+        }
+    }
+
+    .m-searh {
+        .icon--search {
+            left: -10px;
+            &:after {
+                transform: scale(0.35);
+            }
+        }
+    }
 }
 
 @media screen and (max-width: 480px) { // телефон
+    .head-link {
+        height: 55px;
+        display: table;
+    }
 
+    .head-link__title {
+        display: table-cell;
+        height: 55px;
+        width: 100%;
+    }
 }
