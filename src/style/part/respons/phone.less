@@ -185,18 +185,31 @@
         padding-right: 20px;
         display: table-cell;
         vertical-align: top;
+
         p {
             margin-top: 0;
         }
 
         span {
-            display: inline-block;
+            display: block;
+            margin-top: 5px;
+        }
+
+        a {
+            display: block;
+            margin-top: 5px;
         }
     }
 
     .footer-right {
         display: table-cell;
         vertical-align: top;
+    }
+
+    .footer-right__bottom {
+        a {
+            margin-bottom: 10px;
+        }
     }
 
     .main-link-box {
@@ -333,6 +346,12 @@
         line-height: 22px;
     }
 
+    ul li {
+        font-size: 13px;
+        line-height: 22px;
+        margin-bottom: 10px;
+    }
+
     h1 {
         .head(20px, 20px, normal, @color_text);
         font-weight: 700;
@@ -410,6 +429,100 @@
             }
         }
     }
+
+    .news-one-text {
+        img {
+            width: 100%;
+            max-width: none;
+            margin: 0px 0px 20px ;
+        }
+    }
+
+    .like-icon {
+        width: 20px;
+        height: 20px;
+        &:after {
+            transform: scale(0.3);
+            top: -7px;
+            left: -4px;
+        }
+    }
+
+    .like-icon--fb {
+        &:after {
+            left: 0px;
+        }
+    }
+
+    .like-counter {
+        padding-top: 3px;
+        width: 20px;
+        height: 20px;
+        font-size: 9px;
+    }
+
+    .news-one-bottom {
+        margin-bottom: 30px;
+    }
+
+
+    .sert-one {
+        width: 50%;
+    }
+
+    .direction {
+        
+    }
+
+    .direction__img {
+        float: none;
+        display: block;
+        margin: 0 auto 20px;
+    }
+
+    .direction__name {
+        font-size: 14px;
+    }
+
+    .direction__position {
+        font-size: 13px;
+    }
+
+    .direction__descr {
+        margin-left: 0;
+    }
+    
+    .direction-text__title {
+        font-size: 12px;
+        padding: 10px 10px 10px 40px;
+
+        i {
+            width: 30px;
+            &:after {
+                top: 24px;
+                left: 10px;
+                background: #fff;
+                width: 12px;
+                height: 2px;
+            }
+            &:before {
+                top: 24px;
+                left: 10px;
+                background: #fff;
+                width: 12px;
+                height: 2px;
+            }
+        }
+
+        &.open {
+            i:before {
+                width: 2px;
+                left: 14px;
+            }
+        }
+    }
+
+
 }
 
 @media screen and (max-width: 480px) { // телефон
@@ -422,5 +535,21 @@
         display: table-cell;
         height: 55px;
         width: 100%;
+    }
+
+
+    .sert-one {
+        width: 100%;
+        border-bottom: 1px solid #e5edf6;
+        margin-bottom: 30px;
+    }
+
+    .sert-list {
+        border-bottom: none;
+        &:last-child {
+            .sert-one:last-child {
+                border-bottom: none;
+            }
+        }
     }
 }

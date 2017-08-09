@@ -35,4 +35,29 @@ $(document).ready(function() {
         
     });
 
+    $('.sert-zoom').magnificPopup({
+        type: 'image',
+        closeOnContentClick: false,
+        closeBtnInside: false,
+        mainClass: 'mfp-with-zoom mfp-img-mobile',
+        image: {
+            verticalFit: true,
+            titleSrc: function(item) {
+                return item.el.attr('title');
+            }
+        },
+        zoom: {
+            enabled: true,
+            duration: 300, // don't foget to change the duration also in CSS
+            opener: function(element) {
+                return element.find('img');
+            }
+        }
+        
+    });
+
+    $('.direction-text__title').on('click', function() {
+        $(this).toggleClass('open').next().slideToggle();
+    });
+
 });

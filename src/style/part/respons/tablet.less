@@ -2,7 +2,7 @@
 @import "../mixin.less";
 @import "../base.less";
 
-@media screen and (max-width: 1024px) { // планшет вертикально
+@media screen and (max-width: 1023px) { // планшет вертикально
     .wrap {
         padding: 0 20px;
     }
@@ -95,6 +95,10 @@
             display: inline-block;
             margin-right: 20px;
         }
+
+        &:last-child {
+            margin-right: 0;
+        }
     }
 
     .form-cols.flex-elem {
@@ -140,6 +144,23 @@
 
     .lk-enter {
         top: 30px;
+    }
+
+    .footer-right__bottom {
+        a {
+            display: block;
+            margin-bottom: 5px;
+        }
+    }
+
+    .news-content {
+        margin-left: 0;
+    }
+
+    .news-one-text {
+        img {
+            margin: 0 30px 30px 0px;
+        }
     }
 
 }
