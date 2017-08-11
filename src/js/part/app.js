@@ -1,3 +1,5 @@
+var achiev;
+
 $(document).ready(function() {
     $('.m-menu-list a').each(function() {
         if ( $(this).next('ul').length > 0 ) {
@@ -59,5 +61,45 @@ $(document).ready(function() {
     $('.direction-text__title').on('click', function() {
         $(this).toggleClass('open').next().slideToggle();
     });
+
+    var achiev = new Swiper('.achiev-slider', {
+        spaceBetween: 10,
+        paginationClickable: true,
+        autoHeight: true,
+        onSlideChangeEnd: function() {
+            idx = $('.achiev-slider .swiper-slide-active').index();
+            console.log(idx);
+            achievYear.slideTo(idx, 300, true);
+            $('.achiev-year .swiper-slide').removeClass('curr');
+            $('.achiev-year .swiper-slide').eq(idx).addClass('curr');
+        }
+    });
+
+    var achievYear = new Swiper('.achiev-year', {
+        spaceBetween: 0,
+        slidesPerView: 7,
+        slideToClickedSlide: true,
+        allowSwipeToPrev: false,
+        allowSwipeToNext: false,
+        breakpoints: {
+            760: {
+                slidesPerView: 4,
+                allowSwipeToPrev: true,
+                allowSwipeToNext: true,
+                centeredSlides: true,
+            }
+        }
+    });
+
+    var year = $('.achiev-year .swiper-slide');
+
+    year.on('click', function() {
+        year.removeClass('curr');
+        $(this).addClass('curr');
+        idx = $(this).index();
+        achiev.slideTo(idx, 300, true);
+    });
+
+
 
 });

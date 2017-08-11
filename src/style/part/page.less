@@ -219,6 +219,9 @@ body {
     li {
         padding: 0;
         margin: 0;
+        &:before {
+            display: none;
+        }
     }
 
     a {
@@ -228,6 +231,7 @@ body {
         background: @color_blue;
         padding: 15px 25px;
         font-size: 14px;
+        line-height: 18px;
         border-bottom: 1px solid #2767a8;
     }
 
@@ -1434,4 +1438,102 @@ body {
     display: none;
     background: #f5f6f7;
     padding: 30px 20px;
+}
+
+
+.achiev {
+    
+}
+
+.achiev__title {
+    text-align: center;
+    font-size: 18px;
+    color: @color_blue;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    &:before {
+        content: "";
+        display: inline-block;
+        .sprite(@icon-medal);
+        vertical-align: middle;
+    }
+}
+
+.achiev-year {
+    display: table;
+    margin: 0 auto 10px;
+    border-radius: 3px;
+    overflow: hidden;
+    .swiper-slide {
+        display: table-cell;
+        padding: 8px 20px;
+        font-size: 18px;
+        font-weight: 600;
+        background: @color_blue;
+        text-decoration: none;
+        color: #fff;
+        border-right: 1px solid #2767a8;
+        cursor: pointer;
+
+        &.curr {
+            background: @color_orange;
+            border-right: none;
+        }
+
+        &:nth-child(1) {
+            border-radius: 3px 0 0 3px;
+        }
+
+        &:last-child {
+            border-radius: 0px 3px 3px 0px;
+        }
+    }    
+}
+
+.achiev-slider {
+    overflow: hidden;
+}
+
+
+.achiev-list {
+    display: table;
+}
+
+.achiev-one {
+    width: 50%;
+    float: left;
+    padding: 40px 0;
+    border-top: 1px solid #e5edf6;
+    overflow: hidden;
+    &:nth-child(2n) {
+        padding-left: 10px;
+    }
+    &:nth-child(2n+1) {
+        padding-right: 10px;
+    }
+
+    &:nth-child(1) {
+        border-top: none;
+    }
+    &:nth-child(2) {
+        border-top: none;
+    }
+}
+
+.achiev-one__img {
+    float: left;
+    width: 95px;
+}
+
+.achiev-one__title {
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    margin-left: 110px;
+}
+
+.achiev-one__text {
+    font-size: 13px;
+    line-height: 20px;
+    margin-left: 110px;
 }
