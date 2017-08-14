@@ -101,5 +101,23 @@ $(document).ready(function() {
     });
 
 
+    $('.zacup-docs-list').on('click', function(event) {
+        event.preventDefault();
+        $(this).toggleClass('open');
+        if ( $(this).parents('.zacup-one').next().hasClass('zacup-docs') ) {
+            $(this).parents('.zacup-one').next().fadeToggle(100);
+        }
+    });
+
+    $('.tab-menu__one').on('click', function() {
+        $(this).parents('.tab-menu').find('.tab-menu__one').removeClass('active');
+        $(this).addClass('active');
+        idx = $(this).index();
+
+        $(this).parents('.tab-menu').next('.tab-list').find('.tab-one').hide().removeClass('open');
+        $(this).parents('.tab-menu').next('.tab-list').find('.tab-one').eq(idx).show().addClass('open');
+    });
+
+
 
 });
