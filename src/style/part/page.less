@@ -835,6 +835,10 @@ body {
     li {
         margin-bottom: 0;
         position: relative;
+        padding-left: 0;
+        &:before {
+            display: none;
+        }
     }
 
     & > ul { // лвл 1
@@ -1565,13 +1569,20 @@ body {
     &:after {
         content: "";
         position: absolute;
-        top: 15px;
+        bottom: 15px;
         right: 10px;
         width: 0;
         height: 0;
         border-style: solid;
         border-width: 6px 6px 0 6px;
         border-color: #000 transparent transparent transparent;
+    }
+
+    label {
+        display: block;
+        margin-bottom: 5px;
+        font-size: 14px;
+        font-weight: 700;
     }
 }
 
@@ -1893,4 +1904,52 @@ body {
     p {
         padding-left: 50px;
     }
+}
+
+.price-list {
+    padding: 30px 0 0 50px;
+    max-width: 980px;
+
+    .doc {
+        margin-bottom: 30px;
+    }
+}
+
+.price-filtr {
+    border-bottom: 1px solid #e3e3e3;
+    padding-bottom: 30px;
+}
+
+.price-filtr-one {
+    display: table-cell;
+    vertical-align: bottom;
+    padding-right: 10px;
+
+    
+}
+
+.price-filtr__go {
+    height: 35px;
+    padding: 0 60px;
+    background: @color_orange;
+    color: #fff;
+    font-size: 14px;
+    border-radius: 3px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    &:hover {
+        background:#ed800a;
+    }
+}
+
+.price-filtr__reset {
+    height: 35px;
+    padding: 0 60px;
+    background: #e5e5e5;
+    border-radius: 3px;
+    color: #000;
+    border: none;
+    outline: none;
+    cursor: pointer;
 }
