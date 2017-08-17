@@ -1765,16 +1765,16 @@ body {
     color: #005baa;
     font-size: 18px;
     font-weight: 600;
-    border-bottom: 1px solid #84b4de;
+    text-decoration: underline;
     cursor: pointer;
 
     &:hover {
-        border-bottom: none;
+        text-decoration: none;
     }
 
     &.active {
         color: @color_orange;
-        border-bottom: none;
+        text-decoration: none;
     }
 
     &:before {
@@ -1822,6 +1822,41 @@ body {
     }
 }
 
+.tab-menu__one--centr {
+    &:before {
+        .sprite(@tab-centr);
+    }
+    &.active {
+        &:before {
+            .sprite(@tab-centr-h);
+        }
+    }
+}
+
+.tab-menu__one--place {
+    &:before {
+        .sprite(@tab-place);
+        top: -20px;
+        left: -70px;
+    }
+    &.active {
+        &:before {
+            .sprite(@tab-place-h);
+        }
+    }
+}
+
+.tab-menu__one--list {
+    &:before {
+        .sprite(@tab-list);
+    }
+    &.active {
+        &:before {
+            .sprite(@tab-list-h);
+        }
+    }
+}
+
 .tab-list {
 
 }
@@ -1829,9 +1864,20 @@ body {
 .tab-one {
     display: none;
 
+    h2 {
+        font-size: 20px;
+        font-weight: 700;
+        margin-bottom: 30px;
+    }
+
     &.open {
         display: block;
     }
+}
+
+.tab-inn {
+    padding: 0px 0 40px 50px;
+    max-width: 980px;
 }
 
 .energo-block {
@@ -1952,4 +1998,100 @@ body {
     border: none;
     outline: none;
     cursor: pointer;
+}
+
+
+.pays {
+    margin-bottom: 10px;
+}
+
+.pay {
+    width: 23%;
+    margin-right: 2%;
+    text-align: center;
+    background: #fcfcfc;
+    border: 2px solid #d4d9df;
+    border-radius: 3px;
+    padding: 30px 10px;
+    display: inline-block;
+    height: 290px;
+    vertical-align: top;
+    margin-bottom: 20px;
+
+    &:nth-child(4n) {
+        margin-right: 0;
+    } 
+
+    .icon {
+        display: inline-block;
+        transform: scale(0.5);
+        margin-bottom: -10px;
+    }
+}
+
+.pay__title {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    padding: 0 20px;
+
+    &:after {
+        content: "";
+        width: 40px;
+        height: 2px;
+        background: @color_orange;
+        display: block;
+        margin: 20px auto 0;
+    }
+}
+
+.pay__descr {
+    color: #737373;
+    font-size: 13px;
+    font-weight: 300;
+} 
+
+.icon--bulb {
+    .sprite(@icon-bulb);  
+}
+
+.icon--battery {
+    .sprite(@battery)
+}
+
+.icon--gas {
+    .sprite(@icon-gas);
+}
+
+.icon--home {
+    .sprite(@tab-home);
+    margin-bottom: 0px !important;
+}
+
+.icon--mobile {
+    .sprite(@icon-mobile);
+}
+
+.icon--internet {
+    .sprite(@icon-internet);
+}
+
+.icon--phone {
+    .sprite(@icon-phone);
+}
+
+.icon--pay {
+    .sprite(@icon-pay);
+}
+
+.icon--card {
+    .sprite(@tab-place);
+    margin-bottom: 0px !important;
+}
+
+.pay-bottom {
+    font-size: 14px;
+    padding: 15px 20px;
+    text-align: center;
+    background: #f2f2f2;
 }
