@@ -373,15 +373,22 @@
     .news-filtr__title {
         display: block;
         font-size: 11px;
+        margin-bottom: 10px;
     }
 
     .news-filtr-date {
         margin-right: 0px;
+        width: 49%;
+        margin-bottom: 10px;
         input {
-            width: 70px;
-            height: 24px;
+            height: 30px;
             font-size: 11px;
             padding: 0 5px;
+        }
+
+        &:before {
+            width: ~'calc(100% - 45px)';
+            height: 24px;
         }
     }
 
@@ -524,6 +531,7 @@
 
     .achiev {
         overflow: hidden;
+        margin-bottom: 30px;
     }
 
 
@@ -566,16 +574,17 @@
         line-height: 18px;
     }
 
-    .doc-filtr-one {
+    /*.doc-filtr-one {
         width: 100%;
     }
 
     .doc-filtr__select {
         width: 100%;
         margin-bottom: 20px;
-    }
+    }*/
 
     .doc-list {
+        padding: 0;
         table {
             th {
                 font-size: 12px;
@@ -608,6 +617,7 @@
     }
 
     .zacup-list {
+        margin-bottom: 30px;
         td {
             padding: 0px 0;
             display: block;
@@ -633,18 +643,22 @@
 
 
     }
-
-    .zacup-docs {
-        & > td {
-            padding: 5px 0;
-        }
-    }
-
     .zacup-date {
         margin-left: 40px;
         font-size: 12px;
         margin-top: 5px;
     }
+
+    .zacup-docs {
+        & > td {
+            padding: 5px 0;
+        }
+
+        .zacup-date {
+            margin-left: 55px;
+        }
+    }
+
 
     .zakon-list {
         margin-top: 0;
@@ -757,6 +771,14 @@
             margin-bottom: 20px;
         }
     }
+
+    .center {
+        padding-bottom: 0px;
+    }
+
+    .content {
+        overflow: hidden;
+    }
 }
 
 @media screen and (max-width: 480px) { // телефон
@@ -776,6 +798,7 @@
         width: 100%;
         border-bottom: 1px solid #e5edf6;
         margin-bottom: 30px;
+        padding: 0 0 30px;
     }
 
     .sert-list {

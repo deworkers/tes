@@ -32,10 +32,17 @@ $(document).ready(function() {
         $('.lk-enter').slideUp();
         $('.lk-enter-overlay').hide();
     });
-
-    $( ".datepicker" ).datepicker({
-        
+    $(".datepicker" ).datepicker({
+       // showOn: "button",
+        buttonImage: "img/calendar.png",
+        buttonImageOnly: true,
+        buttonText: "Выбрать дату"
     });
+
+    $('.news-filtr-date').on('click', function() {
+
+    });
+
 
     $('.sert-zoom').magnificPopup({
         type: 'image',
