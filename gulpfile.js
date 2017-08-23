@@ -84,7 +84,9 @@ gulp.task('js:build', function () {
 gulp.task('style:build', function () {
     gulp.src(path.src.style) //Выберем наш main.scss
         .pipe(less()) //Скомпилируем
-        .pipe(prefixer()) //Добавим вендорные префиксы
+        .pipe(prefixer({
+            browsers: ['last 4 versions'],
+        })) //Добавим вендорные префиксы
         .pipe(cssmin()) //Сожмем
         .pipe(gulp.dest(path.build.css)) //И в build
         .pipe(reload({stream: true}));
@@ -136,6 +138,7 @@ gulp.task('sprite:build', function() {
                 imgName: 'sprite.png',
                 cssName: 'sprite.less',
                 cssFormat: 'less',
+                padding: 2,
                 algorithm: 'binary-tree',
                 imgPath: '../img/sprite.png'
             }));
