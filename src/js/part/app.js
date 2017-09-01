@@ -93,10 +93,15 @@ $(document).ready(function() {
                 slidesPerView: 4,
                 allowSwipeToPrev: true,
                 allowSwipeToNext: true,
-                centeredSlides: true,
+                //centeredSlides: true,
             }
         }
     });
+
+    if ( $('.achiev-slider').length > 0 ) {
+        achiev.slideTo(6, 300, true);
+    }
+
 
     var year = $('.achiev-year .swiper-slide');
 
@@ -124,6 +129,39 @@ $(document).ready(function() {
         $(this).parents('.tab-menu').next('.tab-list').find('.tab-one').hide().removeClass('open');
         $(this).parents('.tab-menu').next('.tab-list').find('.tab-one').eq(idx).show().addClass('open');
     });
+
+
+    $('.cenrt-select__map').on('click', function() {
+        $('.cenrt-select__list').removeClass('active');
+        $(this).addClass('active');
+        $('.centr-list').hide();
+        $('.cenrt-map').show();
+        $('.centr-filtr-list').hide();
+    });
+
+    $('.cenrt-select__list').on('click', function() {
+        $('.cenrt-select__map').removeClass('active');
+        $(this).addClass('active');
+        $('.centr-list').show();
+        $('.cenrt-map').hide();
+        $('.centr-filtr-list').hide();
+    });
+
+    $('.centr-filtr__title').on('click', function() {
+        $(this).toggleClass('active');
+        $('.centr-filtr-list').slideToggle(10);
+    });
+
+    $('.centr-list-show').on('click', function() {
+        if ( !$(this).hasClass('open') ) {
+            $(this).toggleClass('open').prev().slideToggle();
+            $(this).text('Свернуть');
+        } else {
+            $(this).toggleClass('open').prev().slideToggle();
+            $(this).text('Подробне');
+        }
+    });
+
 
 
 
