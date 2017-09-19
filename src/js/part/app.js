@@ -163,6 +163,21 @@ $(document).ready(function() {
     });
 
 
+    $('.goods-quant__plus').on('click', function() {
+        thisQuant = $(this).parents('.goods-quant');
+        i = thisQuant.find('input').val();
+        i++;
+        thisQuant.find('input').val(i);
+    });
+
+    $('.goods-quant__minus').on('click', function() {
+        thisQuant = $(this).parents('.goods-quant');
+        i = thisQuant.find('input').val();
+        if ( i > 1 ) {
+            i--;
+            thisQuant.find('input').val(i);
+        }
+    });
 
 
 });

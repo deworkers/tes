@@ -690,12 +690,17 @@
         display: table;
     }
 
-    .tab-menu__one {
+    .sub-menu {
+        padding: 0;
+        display: table;
+    }
+
+    .tab-menu__one, .sub-menu__one  {
         display: table-cell;
         margin-left: 0;
         margin-bottom: 10px;
         font-size: 12px;
-        padding: 10px 0;
+        padding: 10px 20px 10px 0;
         &:before {
             display: none;
         }
@@ -1109,6 +1114,143 @@
     .tab-one h2 {
         font-size: 16px;
     }
+
+    .goods-filtr {
+        font-size: 12px;
+        margin-top: 10px;
+    }
+
+    .cart {
+        padding: 0;
+        background: none;
+        width: auto;
+        bottom: 10px;
+    }
+
+    .cart-quant {
+        display: none;
+    }
+
+    .cart-summ {
+        display: none;
+    }
+
+    .cart-icon {
+        position: relative;
+        display: inline-block;
+        vertical-align: middle;
+        top: 0;
+        left: 0;
+        transform: scale(0.8);
+    }
+
+    .cart-quant--mobile {
+        display: inline-block;
+        font-size: 14px;
+        color: #005baa;
+    }
+
+    .goods {
+        width: 100%;
+        margin-right: 0 !important;
+        padding: 10px 10px 10px 70px;
+        text-align: left;
+    }
+
+    .goods-icons {
+        left: 15px;
+        top: 70px;
+    }
+
+    .goods-icon {
+        transform: scale(0.5);
+        margin-bottom: -20px;
+    }
+
+    .goods__title {
+        font-size: 14px;
+    }
+
+    .goods__descr {
+        display: none;
+    }
+
+    .goods__img {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        width: 50px;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .goods__price {
+        margin-top: 5px;
+    }
+
+    .goods__price-old {
+        height: auto;
+        margin-top: 10px;
+    }
+
+    .goods-buy {
+        height: 40px;
+        width: 110px;
+        font-size: 13px;
+        font-weight: 600;
+        position: absolute;
+        bottom: 10px;
+        right: 10px;
+    }
+
+    .goods-quant {
+        margin-bottom: 5px;
+    }
+
+    .goods-card__img {
+        position: relative;
+        width: 100%;
+    }
+
+    .goods-card {
+        padding-left: 0;
+
+        h2 {
+            font-size: 14px;
+        }
+
+        p {
+            font-size: 12px;
+        }
+
+        table {
+            td {
+                font-size: 12px;
+                padding-right: 10px;
+            }
+        }
+
+        li {
+            font-size: 12px;
+        }
+    }
+
+    .goods-buy--card {
+        position: relative;
+        bottom: auto;
+        right: auto;
+        display: inline-block;
+        width: ~'calc(100% - 125px)';
+    }
+
+    .goods-quant {
+        display: inline-block;
+    }
+
+
+
 }
 
 @media screen and (max-width: 480px) { // телефон
