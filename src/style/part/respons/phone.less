@@ -1365,10 +1365,112 @@
         margin-top: 10px;
     }
 
+    .order-total {
+        position: relative;
+        top: 0;
+        padding: 40px 10px 10px 10px;
+        width: 100%;
+        margin-bottom: 30px;
+        
+        a {
+            position: absolute;
+            left: 10px;
+            top: 15px;
+        }
 
+        table {
+            border: none;
+            
 
+            td {
+                display: block;
+                text-align: left !important;
+                padding: 0 0px 0 10px;
+                font-size: 12px;
+                border-left: 1px solid #e3e3e3;
+            }
 
+            th {
+                display: block;
+                border-top: none !important;
+                padding: 0 0px 0 10px;
+                font-size: 12px;
+                text-align: left !important;
+                border-left: 1px solid #e3e3e3;
+            }
+            
+            tr {
+                &:first-child {
+                    td {
+                        padding-left: 0;
+                        border: none;
+                    }
+                }
+            }
+        }
 
+    }
+
+    .order-title {
+        font-size: 16px;
+
+        &:before {
+            margin-right: -15px;
+            transform: scale(0.4);
+        }
+    }
+    
+    .order-line label {
+        font-size: 13px;
+    }
+
+    .order-block {
+        margin-bottom: 10px;
+        padding-bottom: 10px;
+    }
+
+    .oder-button {
+        margin: 20px 0 30px;
+        font-size: 14px;
+        height: 50px;
+        width: 100%;
+    }
+
+    .modal--delivery {
+        width: 100%;
+        top: 0;
+        left: 0;
+        margin-left: 0;
+    }
+
+    .delivery-map {
+        height: 370px;
+    }
+
+    .delivery-close {
+        left: auto;
+        height: 30px;
+        width: 30px;
+        top: 10px;
+        right: 10px;
+        &:before {
+            top: -2px;
+            left: -2px;
+        }
+    }
+
+    .delivery-top {
+        padding: 20px 10px;
+    }
+
+    .delivery-title {
+        font-size: 16px;
+    }
+
+    .delivery-city {
+        height: 370px;
+        width: 100%;
+    }
 
 }
 

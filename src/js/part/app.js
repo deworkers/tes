@@ -179,5 +179,51 @@ $(document).ready(function() {
         }
     });
 
+    $('.delivery-select').on('click', function() {
+        $(this).toggleClass('open');
+        $('.delivery-city').fadeToggle();
+    });
+
+    $('.delivery-list-one').on('click', function() {
+        $('.delivery-select').toggleClass('open');
+        $('.delivery-city').fadeOut();
+
+        thisCity = $(this).data('city');
+        $('.delivery-select input').val(thisCity);
+    });
+
+    $('.select-office').on('click', function() {
+        $('#delivery').fadeOut();
+        $('#overlay').fadeOut();
+        $('html, body').removeClass('j-noScroll');
+    });
+
+    $("#shop-order").validate({
+       rules:{
+            name:{
+                required: true
+            },
+            phone:{
+                required: true
+            },
+            email:{
+                required: true,
+                email:  true,
+            },
+       },
+
+       messages:{
+            name:{
+                required: "Поле обязательное для заполнения",
+            },
+            phone:{
+                required: "Поле обязательное для заполнения",
+            },
+            email:{
+                required: "Поле обязательное для заполнения",
+                email: "Неверный формат E-mail",
+            }
+       }
+    });  
 
 });
