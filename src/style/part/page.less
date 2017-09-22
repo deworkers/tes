@@ -2155,6 +2155,7 @@ body {
         display: inline-block;
         transform: scale(0.5);
         margin-bottom: -10px;
+        margin-top: -10px;
     }
 }
 
@@ -2218,6 +2219,66 @@ body {
     margin-bottom: 0px !important;
 }
 
+
+.icon--icon-energo {
+    .sprite(@icon-energo);
+}
+
+.icon--icon-pays {
+    .sprite(@icon-pays);
+    margin-top: 5px !important;
+    margin-bottom: 0px !important;
+}
+
+.icon--icon-shop {
+    .sprite(@icon-shop);
+    margin-top: 5px !important;
+    margin-bottom: 0px !important;
+}
+
+
+.icon--icon-tecn {
+    .sprite(@icon-tecn);
+}
+
+.icon--icon-main {
+    .sprite(@icon-main);
+}
+
+.icon--icon-askue {
+    .sprite(@icon-askue);
+}
+
+.icon--icon-enegousl {
+    .sprite(@icon-enegousl);
+}
+
+.icon--icon-doc {
+    .sprite(@icon-doc);
+}
+
+.icon--icon-zem {
+    .sprite(@tab-home);
+}
+
+.icon--icon-phone {
+    .sprite(@icon-phone);
+}
+
+.icon--icon-pr {
+    .sprite(@icon-pr);
+}
+
+.icon--icon-load {
+    .sprite(@icon-load);
+}
+
+.icon--icon-car {
+    .sprite(@icon-car);
+}
+
+
+
 .pay-bottom {
     font-size: 14px;
     padding: 15px 20px;
@@ -2250,6 +2311,7 @@ body {
     vertical-align: top;
     padding-left: 30px;
     margin-bottom: 50px;
+    font-size: 14px;
 
     div {
         margin-bottom: 0;
@@ -2349,6 +2411,52 @@ body {
     .sprite(@phone);
     transform: scale(0.5);
     vertical-align: middle;
+}
+
+.icon--phone-mail {
+    display: inline-block;
+    position: absolute;
+    top: 9px;
+    left: 6px;
+    .sprite(@mail);
+    transform: scale(0.53);
+    vertical-align: middle;
+}
+
+.centr-contact--sok {
+    width: 370px;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.centr-top--sok {
+    border-bottom: 1px solid #e3e3e3; 
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+}
+
+.centr-top__download {
+    background: @color_blue;
+    display: inline-block;
+    padding: 10px;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 3px;
+
+    &:hover {
+        background: #023d6e;
+        color: #fff;
+    }
+
+    &:before {
+        content: "";
+        .sprite(@download);
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: 10px;
+    }
+
 }
 
 .centr-working__title {
@@ -2731,7 +2839,6 @@ body {
 .icon--pay-post {
     .sprite(@pay-post);
 }
-
 
 
 
@@ -3487,4 +3594,29 @@ label.order-checkbox {
 
 #shop-order {
     margin-right: 380px;
+}
+
+.centr-top__left {
+    padding-right: 370px;
+}
+
+.sok-bottom {
+    background: #f2f2f2;
+    font-size: 14px;
+    padding: 20px 30px;
+    display: table;
+    margin-bottom: 30px;
+}
+
+.icon-alert {
+    .sprite(@alert);
+    margin-right: 20px;
+    display: block;
+    position: absolute;
+    top: 24px;
+    left: 30px;
+}
+
+.sok-bottom__inn {
+    padding-left: 50px;
 }
