@@ -247,25 +247,35 @@ body {
         a {
             border-bottom: 0;
             font-size: 12px;
-            padding: 10px 10px 10px 25px;
+            padding: 8px 10px 8px 25px;
             background: #003a74;
             &.curr {
                 color: @color_orange;
                 background: #003a74;
                 font-weight: 700;
+                padding-bottom: 0;
             }
         }
     }
 
     ul ul ul {
+        border-bottom: none !important;
         a {
             border-bottom: 0;
             font-size: 12px;
-            padding: 5px 10px 5px 25px;
-            background: #84b4de;
-            &.curr {
-                color: #fff;
+            padding: 5px 10px 5px 45px;
+            position: relative;
+            &:before {
+                content: "";
+                width: 10px;
+                height: 1px;
                 background: #84b4de;
+                position: absolute;
+                top: 14px;
+                left: 25px;
+            }
+            &.curr {
+                color: @color_orange;
                 font-weight: 700;
             }
         }
@@ -1398,9 +1408,10 @@ body {
 
 .sert-one {
     padding: 0px 20px 30px;
-    float: left;
+    display: inline-block;
     width: 25%;
     text-align: center;
+    vertical-align: top;
 
     img {
         margin-bottom: 15px;
@@ -1579,20 +1590,23 @@ body {
     width: 50%;
     float: left;
     padding: 40px 0;
-    border-top: 1px solid #e5edf6;
-    overflow: hidden;
+    //overflow: hidden;
     &:nth-child(2n) {
         padding-left: 10px;
+        position: relative;
+        &:after {
+            content: "";
+            display: block;
+            width: 200%;
+            background: #e5edf6;
+            height: 1px;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+        }
     }
     &:nth-child(2n+1) {
         padding-right: 10px;
-    }
-
-    &:nth-child(1) {
-        border-top: none;
-    }
-    &:nth-child(2) {
-        border-top: none;
     }
 }
 
@@ -4349,4 +4363,34 @@ label.order-checkbox {
 .order-descr {
     color: #737373;
     font-size: 14px;
+}
+
+button[name="logout_butt"] {
+    border: none;
+    background: none;
+    font-size: 14px;
+    border-bottom: 1px solid #84b4de;
+    outline: none;
+    color: @color_link;
+
+    &:hover {
+        border-bottom-color: transparent;
+    }
+}
+
+table.login {
+    width: 100%;
+}
+
+input[name="logout_butt"] {
+    display: inline-block;
+    height: 25px;
+    background: #f58e1f;
+    color: #fff;
+    font-size: 13px;
+    border-radius: 3px;
+    padding: 0 10px;
+    border: none;
+    outline: 0;
+    cursor: pointer;
 }
