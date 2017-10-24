@@ -137,7 +137,7 @@ body {
     &:hover {
         color: @color_orange;
         border-image: none;
-        border-color: transparent;
+        border-bottom: 1px solid transparent;
     }
 }
 
@@ -202,7 +202,7 @@ body {
     padding-bottom: 50px;
 }
 
-.menu {
+.wrap .menu {
     border-radius: 3px;
     overflow: hidden;
     width: 220px;
@@ -400,7 +400,7 @@ body {
     }
 }
 
-.right {
+.wrap .right {
     width: 250px;
     position: absolute;
     top: 0;
@@ -1397,13 +1397,11 @@ body {
 }
 
 .sert-list {
-    border-bottom: 1px solid #84b4de;
-    &:last-child {
-        border-bottom: none;
-    }
+    word-spacing: -0.35em;    
     display: table;
     width: 100%;
     margin-bottom: 30px;
+    position: relative;
 }
 
 .sert-one {
@@ -1412,9 +1410,24 @@ body {
     width: 25%;
     text-align: center;
     vertical-align: top;
+    margin-bottom: 30px;
+    min-height: 370px;
 
     img {
         margin-bottom: 15px;
+    }
+
+    &:nth-child(4n) {
+        &:after {
+            display: block;
+            content: "";
+            width: 100%;
+            height: 1px;
+            position: absolute;
+            left: 0;
+            background: #e5edf6;
+            margin-top: 60px;
+        }
     }
 }
 
@@ -1584,12 +1597,15 @@ body {
 
 .achiev-list {
     display: table;
+    word-spacing: -0.35em;
 }
 
 .achiev-one {
     width: 50%;
-    float: left;
+    display: inline-block;
+    vertical-align: top;
     padding: 40px 0;
+    min-height: 220px;
     //overflow: hidden;
     &:nth-child(2n) {
         padding-left: 10px;
@@ -3893,6 +3909,7 @@ label.order-checkbox {
     line-height: 24px;
     font-size: 14px;
     padding-left: 55px;
+    min-height: 24px;
     
     span {
         color: #000;
@@ -4393,4 +4410,91 @@ input[name="logout_butt"] {
     border: none;
     outline: 0;
     cursor: pointer;
+}
+
+#map-popup {
+    position: absolute;
+    display: none;
+}
+#map-popup .popup-content {
+    padding: 20px 30px;
+    background-color: rgba(255,255,255,0.9);
+    display: inline-block;
+    color: #0652a9;
+}
+#map-popup .popup-content .city {
+    font-size: 24px;
+    font-weight: bold;
+}
+#map-popup .popup-content .address {
+    font-size: 14px;
+    margin: 5px 0 10px 0;
+}
+#map-popup .popup-content .map-phone {
+    font-size: 22px;
+    margin: 2px 0 10px 0;
+}
+#map-popup .popup-content .kassa-name {
+    font-weight: bold;
+    display: inline-block;
+}
+#map-popup .popup-content .kassa {
+    font-weight: normal;
+    display: inline-block;
+}
+#map-popup .popup-content .office-name {
+    font-weight: bold;
+    display: inline-block;
+    margin-top: 5px;
+}
+#map-popup .popup-content .office {
+    font-weight: normal;
+    display: inline-block;
+}
+#map-popup .popup-content .break-name {
+    font-weight: bold;
+    display: inline-block;
+    margin-top: 10px;
+}
+#map-popup .popup-content .break {
+    font-weight: normal;
+    display: inline-block;
+}
+#map-popup .popup-content .holiday-name {
+    font-weight: bold;
+    display: inline-block;
+    margin-top: 5px;
+}
+#map-popup .popup-content .holiday {
+    font-weight: normal;
+    display: inline-block;
+}
+.left-bottom-border {
+    border-bottom: 20px solid rgba(255,255,255,0.9);
+    border-left: 30px solid transparent;
+    margin-right: -5px;
+    vertical-align: bottom;
+}
+.left-top-border {
+    border-top: 20px solid rgba(255,255,255,0.9);
+    border-left: 30px solid transparent;
+    margin-right: -5px;
+    vertical-align: top;
+}
+.right-bottom-border {
+    border-bottom: 20px solid rgba(255,255,255,0.9);
+    border-right: 30px solid transparent;
+    margin-left: -5px;
+    vertical-align: bottom;
+}
+.right-top-border {
+    border-top: 20px solid rgba(255,255,255,0.9);
+    border-right: 30px solid transparent;
+    margin-left: -5px;
+    vertical-align: top;
+}
+#map-popup .popup-border {
+    width: 0;
+    height: 0;
+    display: inline-block;
 }

@@ -275,80 +275,8 @@ $(document).ready(function() {
         }
     });
 
-    if ( $('body').width() < 759 ) {
-        var menuWidth = 0;
-
-        $('.lk-menu__one').each(function() {
-            x = $(this).outerWidth();
-            menuWidth = menuWidth + x;
-        });
-
-        $('.lk-menu-wrap').width(menuWidth + 90);
-
-        var menuDelta = menuWidth - $('.wrap').width();
-
-        $( ".lk-menu-wrap" ).draggable({ 
-            disabled: false,
-            axis: "x", 
-            scroll: false, 
-            stop: function(event, ui) {
-                if ( $('body').width() < 759 ) {
-                    if ( parseInt($('.lk-menu-wrap').css('left')) < -315 ) {
-                        $('.lk-menu-wrap').css('left', '-315px');
-                    }
-
-                    if ( parseInt($('.lk-menu-wrap').css('left')) > 0 ) {
-                        $('.lk-menu-wrap').css('left', '0px');
-                    }
-                }
-            }
-        });
-    } else {
-
-        $('.lk-menu-wrap').removeProp('style');
-
-        $( ".lk-menu-wrap" ).draggable({ disabled: true })
-    }
-
-
-});
-
-$(window).resize(function() {
-
-    if ( $('body').width() < 759 ) {
-        var menuWidth = 0;
-
-        $('.lk-menu__one').each(function() {
-            x = $(this).outerWidth();
-            menuWidth = menuWidth + x;
-        });
-
-        $('.lk-menu-wrap').width(menuWidth + 90);
-
-        var menuDelta = menuWidth - $('.wrap').width();
-
-        $( ".lk-menu-wrap" ).draggable({ 
-            disabled: false,
-            axis: "x", 
-            scroll: false, 
-            stop: function(event, ui) {
-                if ( $('body').width() < 759 ) {
-                    if ( parseInt($('.lk-menu-wrap').css('left')) < -315 ) {
-                        $('.lk-menu-wrap').css('left', '-315px');
-                    }
-
-                    if ( parseInt($('.lk-menu-wrap').css('left')) > 0 ) {
-                        $('.lk-menu-wrap').css('left', '0px');
-                    }
-                }
-            }
-        });
-    } else {
-
-        $('.lk-menu-wrap').removeProp('style');
-
-        $( ".lk-menu-wrap" ).draggable({ disabled: true })
-    }
-
+    
+    menuHeight = $('.menu').height()+ 30;
+    $('.center').css('minHeight',menuHeight+'px')
 
 });

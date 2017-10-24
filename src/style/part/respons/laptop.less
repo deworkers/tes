@@ -67,6 +67,25 @@
 
     .sert-one {
         width: 33.33%;
+
+        &:nth-child(4n) {
+            &:after {
+                display: none;
+            }
+        }
+
+        &:nth-child(3n) {
+            &:after {
+                display: block;
+                content: "";
+                width: 100%;
+                height: 1px;
+                position: absolute;
+                left: 0;
+                background: #e5edf6;
+                margin-top: 60px;
+            }
+        }
     }
 
     .news-one {
