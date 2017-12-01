@@ -82,6 +82,8 @@ body {
     padding: 0;
     background: @color_white;
     color: @color_text;
+    font-size: 14px;
+    line-height: 24px;
 }
 
 img {
@@ -170,13 +172,13 @@ ul li {
     margin-bottom: 10px;
     &:before {
         content: "";
-        width: 5px;
-        height: 5px;
+        width: 4px;
+        height: 4px;
         border-radius: 50%;
         position: absolute;
         background-color: @color_blue;
         top:11px;
-        left: 0;
+        left: 5px;
     }
 
     ul {
@@ -189,6 +191,14 @@ ul li {
         &:before {
             background: #a1a8af;
         }
+    }
+}
+
+ol {
+    margin-left: 20px;
+
+    li {
+        padding-left: 10px;
     }
 }
 

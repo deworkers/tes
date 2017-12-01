@@ -279,4 +279,11 @@ $(document).ready(function() {
     menuHeight = $('.menu').height()+ 30;
     $('.center').css('minHeight',menuHeight+'px')
 
+    $('.centr-type-one label').on('click', function() {
+        if ( $(this).prev('input').prop("checked") ) {
+            $(this).prev('input').prop("checked", false);
+        } else {
+            $(this).prev('input').prop("checked", true);
+        }
+    });
 });
